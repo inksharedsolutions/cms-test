@@ -14,7 +14,7 @@
     "exec": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node public/main.js",
-    "build" : "node public/main.js && react-script build"
+    "build" : "node public/main.js && npm run bundle"
   },
   "keywords": [],
   "author": "",
