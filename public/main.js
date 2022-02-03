@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require("fs")
 
-const dirPath = path.join(__dirname, "../posts")
+const dirPath = path.join(__dirname, "../books")
 const dirPathPages = path.join(__dirname, "../src/pages/content")
 let postlist = []
 let pagelist = []
@@ -36,7 +36,7 @@ const formatDate = (date) => {
 
   
 
-const getPosts = () => {
+const getBooks = () => {
     fs.readdir(dirPath, (err, files) => {
         if (err) {
             return console.log("Failed to list contents of directory: " + err)
@@ -92,7 +92,7 @@ const getPosts = () => {
                         return a.id < b.id ? 1 : -1
                     })
                     let data = JSON.stringify(sortedList)
-                    fs.writeFileSync("src/posts.json", data)
+                    fs.writeFileSync("src/books.json", data)
                 }
             })
         })
@@ -120,5 +120,5 @@ const getPages = () => {
     return 
 }
 
-getPosts()
+getBooks()
 getPages()
