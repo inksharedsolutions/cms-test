@@ -14,6 +14,7 @@ import Indigo from "../../assets/images/logo/indigo.png";
 import Ingram from "../../assets/images/logo/ingram.png";
 import LightningSource from "../../assets/images/logo/lightning source.png";
 import Blueberry from "../../assets/images/books/bluedreams.png";
+import b1 from "../../../public/images/61ewcpwsf-l.jpg";
 import Amazon from "../../assets/images/logo/amazon-lib.png";
 
 import JSONData from "../../books.json"
@@ -141,6 +142,9 @@ const AboutUs: React.FC<Props> = () => {
                         <div className="book-con">
 
                             {JSONData.map((data, index) => {
+
+                                console.log(JSON.stringify(data))
+
                                 return(
                                     <div className="book" key={index}>
                                         <div className="lib-flex">
@@ -149,17 +153,17 @@ const AboutUs: React.FC<Props> = () => {
                                             </div>
                                             <div className="book-right">
                                                         <div className="genre">
-                                                            <p>{}</p>
+                                                            <p>{data.genre}</p>
                                                         </div>
                                                         <div className="title">
                                                             <h2>{data.title}</h2>
-                                                            <h3>{}</h3>
+                                                            <h3>{data.subtitle}</h3>
                                                         </div>
                                                         <div className="author">
                                                             <p>{data.author}</p>
                                                         </div>
                                                         <div className="amazon">
-                                                            <a href="#" rel="noopener" target="_blank"><img src={Amazon} alt=""  /></a>
+                                                            <a href={data.amazon_link} rel="noopener" target="_blank"><img src={Amazon} alt=""  /></a>
                                                         </div>
                                             </div>
                                         </div>
