@@ -16,7 +16,7 @@ import LightningSource from "../../assets/images/logo/lightning source.png";
 import Blueberry from "../../assets/images/books/bluedreams.png";
 import Amazon from "../../assets/images/logo/amazon-lib.png";
 
-import JSONData from "../../posts.json"
+import JSONData from "../../books.json"
 
 interface Props { }
 
@@ -145,73 +145,28 @@ const AboutUs: React.FC<Props> = () => {
                                     <div className="book" key={index}>
                                         <div className="lib-flex">
                                             <div className="book-left">
-                                                <img src={Blueberry} alt=""/>
+                                                <img src={data.thumbnail} alt=""/>
                                             </div>
                                             <div className="book-right">
                                                         <div className="genre">
-                                                            <p>Self-Help</p>
+                                                            <p>{}</p>
                                                         </div>
                                                         <div className="title">
-                                                            <h2>Blueberry Dreams</h2>
-                                                            <h3>Stimulate The Inner You</h3>
+                                                            <h2>{data.title}</h2>
+                                                            <h3>{}</h3>
                                                         </div>
                                                         <div className="author">
-                                                            <p>Charles Pope</p>
+                                                            <p>{data.author}</p>
                                                         </div>
                                                         <div className="amazon">
-                                                            <img src={Amazon} alt=""  />
+                                                            <a href="#" rel="noopener" target="_blank"><img src={Amazon} alt=""  /></a>
                                                         </div>
                                             </div>
                                         </div>
                                     </div>
                                 )
                             })}
-
-                                <div className="book">
-                                    <div className="lib-flex">
-                                            <div className="book-left">
-                                                <img src={Blueberry} alt=""/>
-                                            </div>
-                                            <div className="book-right">
-                                                        <div className="genre">
-                                                            <p>Self-Help</p>
-                                                        </div>
-                                                        <div className="title">
-                                                            <h2>Blueberry Dreams</h2>
-                                                            <h3>Stimulate The Inner You</h3>
-                                                        </div>
-                                                        <div className="author">
-                                                            <p>Charles Pope</p>
-                                                        </div>
-                                                        <div className="amazon">
-                                                            <img src={Amazon} alt=""  />
-                                                        </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="book">
-                                        <div className="lib-flex">
-                                                <div className="book-left">
-                                                    <img src={Blueberry} alt=""/>
-                                                </div>
-                                                <div className="book-right">
-                                                            <div className="genre">
-                                                                <p>Self-Help</p>
-                                                            </div>
-                                                            <div className="title">
-                                                                <h2>Blueberry Dreams</h2>
-                                                                <h3>Stimulate The Inner You</h3>
-                                                            </div>
-                                                            <div className="author">
-                                                                <p>Charles Pope</p>
-                                                            </div>
-                                                            <div className="amazon">
-                                                                <img src={Amazon} alt=""  />
-                                                        </div>
-                                                </div>
-                                            </div>
-                                     </div>
+                                
                         </div>
                     </div>
                 </div>

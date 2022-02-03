@@ -79,7 +79,10 @@ const getBooks = () => {
                 post = {
                     id: timestamp,
                     title: metadata.title ? metadata.title : "No title given",
+                    subtitle: metadata.subtitle ? metadata.subtitle : "No title given",
                     author: metadata.author ? metadata.author : "No author given",
+                    genre: metadata.genre ? metadata.genre : "No author given",
+                    amazon_link: metadata.amazon_link ? metadata.amazon_link : "No author given",
                     date: publishedDate ? publishedDate : "No date given",
                     time: parsedDate["time"],
                     thumbnail: metadata.thumbnail,

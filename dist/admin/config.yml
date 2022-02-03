@@ -4,7 +4,7 @@ backend:
 
 # These lines should *not* be indented
 media_folder: "public/images" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "public/images" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "books" # Used in routes, e.g., /admin/collections/blog
@@ -15,9 +15,9 @@ collections:
     fields: # The fields for each document, usually in front matter
    
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
       - {label: "Genre", name: "genre", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Amazon Link", name: "amazon-link", widget: "string"}
-      - {label: "Image", name: "book-image", widget: "image"}
+      - {label: "Amazon Link", name: "amazon_link", widget: "string"}
+      - {label: "Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
