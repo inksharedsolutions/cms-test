@@ -43,6 +43,7 @@ export const App = () => {
                     <Route path="/faq" component={faq} />
                     <Route path="/privacy" component={privacy} />
                     <Route path="/library" component={LibraryContainer} />
+                    {/* <Route exact path="/post/:id" render={props => <Post {...props} />} /> */}
                 </Switch>
             </HashRouter>   
             {

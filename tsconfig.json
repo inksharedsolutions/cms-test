@@ -10,9 +10,15 @@
         "target": "es5",
         "allowJs": true,
         "jsx": "react",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+
     },
+ 
     "include": [
         "./src/**/*",
         "index.d.ts"
-    ]
+    ],
+       "resolveJsonModule": true,
+    "esModuleInterop": true,
 }
