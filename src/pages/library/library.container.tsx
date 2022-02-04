@@ -149,7 +149,7 @@ const AboutUs: React.FC<Props> = () => {
                                     <div className="book" key={index}>
                                         <div className="lib-flex">
                                             <div className="book-left">
-                                                <img src={data.thumbnail} alt=""/>
+                                                <img src={"../../../" + data.thumbnail} alt=""/>
                                             </div>
                                             <div className="book-right">
                                                         <div className="genre">
